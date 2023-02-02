@@ -1,0 +1,63 @@
+.taskBody {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+
+    width: 736px;
+    height: 72px;
+
+    background: var(--gray-500);
+
+    border: 1px solid var(--gray-400);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+.doneAndTextWrapper {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+
+    width: 736px;
+    height: 72px;
+
+    background: var(--gray-500);
+
+    border: 1px solid var(--gray-400);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+.notDoneText {
+    width: 632px;
+    height: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    color: var(--gray-100);
+}
+
+.doneText {
+    width: 632px;
+    height: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    text-decoration-line: line-through;
+
+    color: var(--gray-300);
+}

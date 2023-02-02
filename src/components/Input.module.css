@@ -1,0 +1,20 @@
+.input {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    width: 638px;
+    height: 54px;
+    background: var(--gray-500);
+    color: var(--gray-300);
+    
+}
+
+.input:hover {
+    border: 1px solid var(--purple-dark);
+    color: var(--gray-100);
+}
+
+.input:focus {
+    border: 1px solid var(--purple-dark);
+    color: var(--gray-100);  
+}

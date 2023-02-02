@@ -1,0 +1,221 @@
+.addTask {
+    /* display: block;
+    margin-top: -27px;
+    text-align: center;
+    align-items: center;
+    justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 736px;
+    height: 54px;
+    left: calc(50% - 736px/2);
+    top: 173px;
+} 
+
+.tasksWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 736px;
+    height: 287px;
+    left: calc(50% - 736px/2);
+    top: 291px;
+}
+
+.createdAndDoneWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px;
+    
+    width: 736px;
+    height: 19px;
+
+    flex: none;
+    order: 0;
+    
+    flex-grow: 0;
+}
+
+.created {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 150px;
+    height: 19px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.created p {
+    width: 106px;
+    height: 17px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: var(--blue);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.done {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 111px;
+    height: 19px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.done p {
+
+width: 78px;
+height: 17px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+
+color: var(--purple);
+
+flex: none;
+order: 0;
+flex-grow: 0;  
+}
+
+
+.counterBackground {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 10px;
+
+    width: 25px;
+    height: 19px;
+
+    background: var(--gray-400);
+    border-radius: 999px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.counterText {
+    width: 9px;
+    height: 15px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 1px;
+
+    color: var(--gray-200);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.tasksEmpty {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    gap: 16px;
+
+    width: 736px;
+    height: 244px;
+
+    border-top: 1px solid #333333;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.tasksFilled {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    width: 736px;
+    height: 408px;
+}
+
+.clipboard {
+    width: 56px;
+    height: 56px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.noTasks {
+    width: 688px;
+    height: 44px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    
+    font-size: 1rem;
+    line-height: 140%;
+
+    text-align: center;
+
+    color: #808080;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.noTasks strong {
+    font-weight: 700;
+}
+
