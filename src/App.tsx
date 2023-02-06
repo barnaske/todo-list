@@ -25,9 +25,9 @@ export default function App() {
   })
 
   const [newTaskText, setNewTaskText] = useState('')
-  
+
   function tasksAreEmpty() {
-    if (tasksCounter == 0){
+    if (tasksCounter == 0) {
       return true
     } else {
       return false
@@ -38,12 +38,12 @@ export default function App() {
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault()
-    setTasks([...tasks, 
-      {
-        id: uuidv4(),
-        content: newTaskText,
-        isDone: false
-      }]
+    setTasks([...tasks,
+    {
+      id: uuidv4(),
+      content: newTaskText,
+      isDone: false
+    }]
     )
     setNewTaskText('')
     setTasksCounter((actualState) => {
@@ -69,7 +69,7 @@ export default function App() {
           setDoneTasks((actualState) => {
             return actualState + 1
           })
-        }else {
+        } else {
           console.log('Debugging to see -1 to tasks done')
           setDoneTasks((actualState) => {
             return actualState - 1
@@ -94,7 +94,7 @@ export default function App() {
           setTasksCounter((actualState) => {
             return actualState - 1
           })
-        }else {
+        } else {
           setTasksCounter((actualState) => {
             return actualState - 1
           })
@@ -110,38 +110,39 @@ export default function App() {
       <Header />
 
       <form onSubmit={handleCreateNewTask} className={styles.addTask}>
-        <Input 
+        <Input
           value={newTaskText}
           onChange={handleNewTaskChange}
           onInvalid={handleInvalidTask}
-          />
+        />
         <CreateButton />
       </form>
 
-        <div className={styles.tasksWrapper}>
-          <div className={styles.createdAndDoneWrapper}>
-            <div className={styles.created}>
-              <p>Tarefas criadas</p>
-              <div>
-                <span className={styles.counterBackground}>
-                  <span className={styles.counterText}>
-                    {tasksCounter}
-                  </span>
-                </span>
-              </div>
-            </div>
-            <div className={styles.done}>
-              <p>Concluídas</p>
-              <div>
+      <div className={styles.tasksWrapper}>
+        <div className={styles.createdAndDoneWrapper}>
+          <div className={styles.created}>
+            <p>Tarefas criadas</p>
+            <div>
               <span className={styles.counterBackground}>
-                  <span className={styles.counterText}>
-                    {doneTasks}  
-                  </span>  
+                <span className={styles.counterText}>
+                  {tasksCounter}
                 </span>
-              </div>
+              </span>
             </div>
           </div>
-          <div id="tasks" className={tasksCounter == 0 ? styles.tasksEmpty : styles.tasksFilled}>
+          <div className={styles.done}>
+            <p>Concluídas</p>
+            <div>
+              <span className={styles.counterBackground}>
+                <span className={styles.counterText}>
+                  {doneTasks}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="tasks" className={tasksCounter == 0 ? styles.tasksEmpty : styles.tasksFilled}>
+          {tasksCounter == 0 ?
             <div>
               <img className={styles.clipboard} src={clipboard} alt="Clipboard img" />
               <div className={styles.noTasks}>
@@ -149,25 +150,23 @@ export default function App() {
                 <p>Crie tarefas e organize seus itens a fazer</p>
               </div>
             </div>
-            {
-              tasks.map(task => {
-                return (
-                  <Task
-                    id={task.id}
-                    key={task.id}
-                    content={task.content}
-                    isDone={task.isDone}
-                    onMarkAsDone={setTaskDone}
-                    onDeleteTask={deleteTask}
-                  />
-                )
-              })
-            }
-          </div>
+            :
+            tasks.map(task => {
+              return (
+                <Task
+                  id={task.id}
+                  key={task.id}
+                  content={task.content}
+                  isDone={task.isDone}
+                  onMarkAsDone={setTaskDone}
+                  onDeleteTask={deleteTask}
+                />
+              )
+            })
+          }
         </div>
-
+      </div>
       <div>
-        
       </div>
     </div>
   )
