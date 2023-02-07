@@ -65,12 +65,10 @@ export default function App() {
       if (task.id == id) {
         task.isDone = !task.isDone
         if (task.isDone) {
-          console.log('Debugging to see +1 to tasks done')
           setDoneTasks((actualState) => {
             return actualState + 1
           })
         } else {
-          console.log('Debugging to see -1 to tasks done')
           setDoneTasks((actualState) => {
             return actualState - 1
           })
@@ -133,24 +131,24 @@ export default function App() {
           <div className={styles.done}>
             <p>Concluídas</p>
             <div>
-              <span className={styles.counterBackground}>
-                <span className={styles.counterText}>
-                  {doneTasks}
+              <span className={styles.doneCounterBackground}>
+                <span className={styles.doneCounterText}>
+                  {doneTasks} de {tasksCounter}
                 </span>
               </span>
             </div>
           </div>
         </div>
-        <div id="tasks" className={tasksCounter == 0 ? styles.tasksEmpty : styles.tasksFilled}>
-          {tasksCounter == 0 ?
-            <div>
+        <div id="tasks" className={styles.tasksFilled}>
+          {tasksCounter == 0 ?          
+            <div className={styles.tasksEmpty}>
               <img className={styles.clipboard} src={clipboard} alt="Clipboard img" />
               <div className={styles.noTasks}>
                 <p><strong>Você ainda não tem tarefas cadastradas</strong></p>
                 <p>Crie tarefas e organize seus itens a fazer</p>
               </div>
             </div>
-            :
+            :  
             tasks.map(task => {
               return (
                 <Task
